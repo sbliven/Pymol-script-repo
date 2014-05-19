@@ -1,8 +1,8 @@
 from pymol import cmd
 import re,types,random
 
-def findseq(needle, haystack, selName=None, het=0, firstOnly=0):
-	"""
+def findseq(needle, haystack="(all)", selName=None, het=0, firstOnly=0):
+    """
 DESCRIPTION:
 Given a sequence/regex to find, select those
 matching amino acids in the protein.
