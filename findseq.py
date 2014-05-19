@@ -1,4 +1,8 @@
-"""
+from pymol import cmd
+import re,types,random
+
+def findseq(needle, haystack, selName=None, het=0, firstOnly=0):
+	"""
 DESCRIPTION:
 Given a sequence/regex to find, select those
 matching amino acids in the protein.
@@ -58,14 +62,6 @@ Assumes we're using the ONE LETTER amino acid abbreviations.
 AUTHOR:
 Jason Vertrees, 2009.
 """
-
-from pymol import cmd
-import re
-import types
-import random
-
-
-def findseq(needle, haystack, selName=None, het=0, firstOnly=0):
     # set the name of the selection to return.
     if selName == None:
         rSelName = "foundSeq" + str(random.randint(0, 32000))
