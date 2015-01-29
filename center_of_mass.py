@@ -2,16 +2,16 @@
 See more here: http://www.pymolwiki.org/index.php/center_of_mass
 
 DESCRIPTION
- 
-   Places a pseudoatom at the center of mass
- 
-   Author: Sean Law
-   Michigan State University
-   slaw (at) msu . edu
- 
+
+    Places a pseudoatom at the center of mass
+
+    Author: Sean Law
+    Michigan State University
+    slaw (at) msu . edu
+
 SEE ALSO
- 
-   pseudoatom, get_com
+
+    pseudoatom, get_com
 '''
 
 
@@ -19,6 +19,21 @@ from pymol import cmd
 
 
 def com(selection, state=None, mass=None, object=None, quiet=1, **kwargs):
+    """
+USAGE
+
+    com selection[, state[, mass[, object[, quiet]]]]
+   
+DESCRIPTION
+
+   Places a pseudoatom at the center of mass
+
+SEE ALSO
+
+   pseudoatom, get_com
+"""
+
+
     quiet = int(quiet)
     if (object == None):
         try:
